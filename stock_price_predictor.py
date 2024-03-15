@@ -15,7 +15,7 @@ start = datetime(end.year-5,end.month,end.day)
 
 data = yf.download(stock, start, end)
 
-model = load_model("Latest_stock_price_model_CELH.keras")
+model = load_model("celh_lstm_model.keras")
 st.subheader("Stock Data")
 st.write(data)
 
