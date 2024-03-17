@@ -1,13 +1,17 @@
+from sklearn.linear_model import LinearRegression
 import streamlit as st
 import pandas as pd
 import numpy as np
 from keras.models import load_model
 import matplotlib.pyplot as plt
 import yfinance as yf
+import plost
 
 st.title("Stock Price Predictor App")
 
 stock = st.text_input("Enter the Stock ID", "CELH")
+
+
 
 from datetime import datetime
 end = datetime.now()
@@ -15,9 +19,11 @@ start = datetime(end.year-5,end.month,end.day)
 
 data = yf.download(stock, start, end)
 
+
+###################### ---------LOAD LSTM ------------------#####################
 model = load_model("celh_lstm_model.keras")
-st.subheader("Stock Data")
-st.write(data)
+st.subheader("Stock Data from 5 years till date")
+st.write(data.tail(50))
 
 splitting_len = int(len(data)*0.7)
 x_test = pd.DataFrame(data.Close[splitting_len:])
@@ -72,10 +78,15 @@ ploting_data = pd.DataFrame(
     index = data.index[splitting_len+100:]
 )
 st.subheader("Original values vs Predicted values")
-st.write(ploting_data)
+st.write(ploting_data.tail(50))
 
 st.subheader('Original Close Price vs Predicted Close price')
 fig = plt.figure(figsize=(15,6))
 plt.plot(pd.concat([data.Close[:splitting_len+100],ploting_data], axis=0))
-plt.legend(["Data- not used", "Original Test data", "Predicted Test data"])
+plt.legend(["Close", "Original Test data", "Predicted Test data"])
 st.pyplot(fig)
+
+multi="Please note that stock market prediction is a challenging task due to the inherent volatility and unpredictability of financial markets. It's essential to consider the risks involved in trading stocks based on predictions and to use multiple models and techniques to increase the accuracy of predictions"
+st.markdown(multi)
+
+
