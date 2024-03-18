@@ -33,7 +33,7 @@ The Stock Price Predictor was created after our group wanted to see if we could 
 
 You will mainly be interacting with the Stock Price Predictor through Python code and Streamlit, an open-source framework designed for visualizing data.
 
-The  Stock Price Predictor was developed by a team of four developers to submit for their final project of the Data Analytics Boot Camp hosted by Washington University in St. Louis with edX. 
+The Stock Price Predictor was developed by a team of four developers to submit for their final project of the Data Analytics Boot Camp hosted by Washington University in St. Louis with edX. 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -95,6 +95,8 @@ To set up a local copy, follow these straightforward steps as provided in the ex
 4. The stock modelling is currently prefilled to model data after Celsius Holdings stock history. Feel free to delete instances of the CELH stock moniker and replace with another stock to model. Run all of the cells and export the Keras model.
 6. Review the stock_price_predictor.py file and make sure the exported model file name matches what will be loaded by the script. Run the stock_price_predictor.py file through your Python environment. After loading, your environment should note Streamlit running with a localhost or 127.0.0.1 address.
 7. Open your brower and navigate to the localhost address listed in the shell. Input your stock symbol. Review the data. Congratulations! You are interacting with the Stock Price Predictor!
+
+For clarification, the other models used in our development process are included in the repo for project rubric grading purposes. It is unnecessary to interact with them while using the Stock Price Predictor.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
