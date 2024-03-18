@@ -1,1 +1,4 @@
-# Project_4
+# Group Project
+Stock Prediction for CELH 
+
+Contributors -
