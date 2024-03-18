@@ -91,7 +91,7 @@ To set up a local copy, follow these straightforward steps as provided in the ex
    ```sh
    git clone https://github.com/tadespi/Project_4.git
    ```
-3. Start a Jupyter Notebook session and open the celh_modelling.ipynb notebook. 
+3. Start a Jupyter Notebook session and open the celh_lstm_model.ipynb notebook. 
 4. The stock modelling is currently prefilled to model data after Celsius Holdings stock history. Feel free to delete instances of the CELH stock moniker and replace with another stock to model. Run all of the cells and export the Keras model.
 6. Review the stock_price_predictor.py file and make sure the exported model file name matches what will be loaded by the script. Run the stock_price_predictor.py file through your Python environment. After loading, your environment should note Streamlit running with a localhost or 127.0.0.1 address.
 7. Open your brower and navigate to the localhost address listed in the shell. Input your stock symbol. Review the data. Congratulations! You are interacting with the Stock Price Predictor!
