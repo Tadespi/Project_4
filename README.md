@@ -40,8 +40,6 @@ The  Stock Price Predictor was developed by a team of four developers to submit 
 ### Built With
 
 * [![Python][Python.com]][Python-url]
-* [![CSS][CSS.com]][CSS-url]
-* [![JavaScript][JS.com]][JS-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
