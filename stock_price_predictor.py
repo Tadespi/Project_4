@@ -21,7 +21,7 @@ data = yf.download(stock, start, end)
 
 
 ###################### ---------LOAD LSTM ------------------#####################
-model = load_model("celh_lstm_model.keras")
+model = load_model("CELH_stock_price_model_0314.keras")
 st.subheader("Stock Data from 5 years till date")
 st.write(data.tail(50))
 
